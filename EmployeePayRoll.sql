@@ -17,3 +17,6 @@ select * from employee_payroll
 
 --UC3 Inserting Data into Table
 insert into employee_payroll values('Siddhant',50000,'2020-01-01'),('Emma',30000,'2020-01-01'),('Aniket',45000,'2021-01-01'),('Vipul',25000,'2022-01-01')
+
+--UC4 retrieve data from table 
+select * from employee_payroll
