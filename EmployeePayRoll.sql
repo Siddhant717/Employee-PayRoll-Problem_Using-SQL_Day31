@@ -20,3 +20,12 @@ insert into employee_payroll values('Siddhant',50000,'2020-01-01'),('Emma',30000
 
 --UC4 retrieve data from table 
 select * from employee_payroll
+
+
+--UC5 Retrieve salary data from particular employee
+select Salary from employee_payroll
+where Name='Siddhant'
+
+--UC5 Retrieve Names from the selected date to present date
+select Name from employee_payroll
+where startdate BETWEEN CAST('2020-01-01' AS DATE) AND GETDATE();
