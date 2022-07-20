@@ -29,3 +29,18 @@ where Name='Siddhant'
 --UC5 Retrieve Names from the selected date to present date
 select Name from employee_payroll
 where startdate BETWEEN CAST('2020-01-01' AS DATE) AND GETDATE();
+
+--UC6 add Gender to Employee Payroll Table and Update the Rows
+alter table employee_payroll
+add Gender char
+
+update employee_payroll
+set Gender ='M' where Name='Siddhant' or Name='Aniket' or Name='Vipul'
+
+update employee_payroll
+set Gender = 'F' where Name='Emma'
+
+select * from employee_payroll
+
+--Add Gender field after Name field
+select Id,Name,Gender,StartDate,Salary from employee_payroll
