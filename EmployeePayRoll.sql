@@ -116,4 +116,7 @@ set BasicPay = 25000, Deductions = 1000, TaxablePay = 500, IncomeTax = 1500, Net
 insert into employee_payroll values ('Terissa', 40000, '2019-08-01', 'F',88268979598,'Bangalore','Sales',40000, 2000, 1000, 100, 36000),
 ('Terissa', 30000, '2019-10-01', 'F',77265579565,'Indore','Marketing',30000, 2000, 1000, 100, 27000)
 
+--UC10-
+select * from employee_payroll where name = 'Terissa'
+
 
