@@ -65,3 +65,27 @@ Select MAX(Salary) From employee_payroll Where Gender='F' Group by Gender
 
 Select COUNT(Salary) From employee_payroll Where Gender='M' Group by Gender
 Select COUNT(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+
+--UC8 extend employee_payroll data and save more details
+alter table employee_payroll
+add PhoneNumber bigint, Address varchar(20) default 'Indore',Department varchar(30) not null, 
+
+
+
+update employee_payroll
+set PhoneNumber = 9090997799, Address = 'Ajmer', Department = 'Marketing' where Name = 'Siddhant'
+
+update employee_payroll
+set PhoneNumber = 8845457257, Address = 'Surat', Department = 'Sales' where Name = 'Emma'
+
+update employee_payroll
+set PhoneNumber = 7845667267, Address = 'Pune', Department = 'Accounts' where Name = 'Aniket'
+
+update employee_payroll
+set PhoneNumber = 9845767297, Address = 'Mumbai', Department = 'Sales' where Name = 'Vipul'
+
+update employee_payroll
+set PhoneNumber = 7746547279, Address = 'Mumbai', Department = 'Marketing' where Name = 'Chetna'
+
+select * from employee_payroll
