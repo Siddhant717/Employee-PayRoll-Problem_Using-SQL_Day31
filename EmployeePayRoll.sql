@@ -1,4 +1,6 @@
 
+
+
 --UC1-Ability to create a payroll service database
 create database payroll_service
 
@@ -44,3 +46,22 @@ select * from employee_payroll
 
 --Add Gender field after Name field
 select Id,Name,Gender,StartDate,Salary from employee_payroll
+
+--Adding 1 more data
+insert into employee_payroll values('Chetna',45000,'2020-05-01','F');
+
+--UC7 use of Database functions with GroupBy
+Select SUM(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select SUM(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+Select AVG(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select AVG(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+Select MIN(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select MIN(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+Select MAX(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select MAX(Salary) From employee_payroll Where Gender='F' Group by Gender
+
+Select COUNT(Salary) From employee_payroll Where Gender='M' Group by Gender
+Select COUNT(Salary) From employee_payroll Where Gender='F' Group by Gender
