@@ -89,3 +89,26 @@ update employee_payroll
 set PhoneNumber = 7746547279, Address = 'Mumbai', Department = 'Marketing' where Name = 'Chetna'
 
 select * from employee_payroll
+
+--UC9 extend employee_payroll table to have Basic Pay, Deductions, Taxable Pay, Income Tax, Net Pay
+alter table
+employee_payroll
+add BasicPay float, Deductions float, TaxablePay float, IncomeTax float, NetPay float
+
+--updating the phone, address and department field 
+update employee_payroll
+set BasicPay = 32000, Deductions = 2000, TaxablePay = 1000, IncomeTax = 550, NetPay= 28500 where Name = 'Siddhant'
+
+update employee_payroll
+set BasicPay = 10000, Deductions = 1000, TaxablePay = 1000, IncomeTax = 200, NetPay= 8000 where Name = 'Emma'
+
+update employee_payroll
+set BasicPay = 50000, Deductions = 2500, TaxablePay = 1500, IncomeTax = 200, NetPay= 47000 where Name = 'Aniket'
+
+update employee_payroll
+set BasicPay = 15000, Deductions = 500, TaxablePay = 500, IncomeTax = 150, NetPay= 13000 where Name = 'Vipul'
+
+update employee_payroll
+set BasicPay = 25000, Deductions = 1000, TaxablePay = 500, IncomeTax = 1500, NetPay= 22000 where Name = 'Chetna'
+
+
