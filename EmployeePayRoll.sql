@@ -112,3 +112,8 @@ update employee_payroll
 set BasicPay = 25000, Deductions = 1000, TaxablePay = 500, IncomeTax = 1500, NetPay= 22000 where Name = 'Chetna'
 
 
+--UC10 Insert all values to the table
+insert into employee_payroll values ('Terissa', 40000, '2019-08-01', 'F',88268979598,'Bangalore','Sales',40000, 2000, 1000, 100, 36000),
+('Terissa', 30000, '2019-10-01', 'F',77265579565,'Indore','Marketing',30000, 2000, 1000, 100, 27000)
+
+
